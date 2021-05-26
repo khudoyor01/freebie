@@ -31,7 +31,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 1rem;
-  position: relative;
+  height: 10vh;
 }
 
 .container .navbar .navbar__menu .menu__logo {
@@ -102,21 +102,65 @@ body {
   transition: all 500ms ease;
 }
 
+.container .navbar .navbar__menu .menu__sign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .container .navbar .navbar__menu .menu__sign .sign {
   text-decoration: none;
   color: #000;
   font-size: 18px;
   font-weight: 400;
+  padding: 0.8rem 3rem;
 }
 
-.container .navbar .navbar__menu .menu__sign .up {
-  position: absolute;
-  top: 20%;
-  left: 90%;
+.container .navbar .navbar__menu .menu__sign .link .signup {
+  padding: 0.8rem 3rem;
   text-decoration: none;
-  color: #f53855;
   font-size: 18px;
   font-weight: 400;
+  color: #f53855;
+  border-radius: 50px;
+  border: 1px solid #f53855;
+}
+
+.container .navbar .navbar__menu .menu__sign .link .signup:hover {
+  color: #fff;
+  background-color: #f53855;
+}
+
+.container .navbar .navbar__menu .menu__sign .link:hover {
+  -webkit-animation: 0.5s infinite;
+          animation: 0.5s infinite;
+  -webkit-animation-name: duk;
+          animation-name: duk;
+}
+
+@-webkit-keyframes duk {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes duk {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
 }
 
 .container .navbar .mobile__logo {
@@ -1014,7 +1058,7 @@ body {
 .footer .footer__adress .footer__information .title {
   font-weight: 500;
   font-size: 20px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .footer .footer__adress .footer__information .branch {
@@ -1028,7 +1072,473 @@ body {
   font-weight: 400;
 }
 
-@media (max-width: 320px) {
+@media (min-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+  .container .navbar .navbar__menu .menu__logo .logo {
+    margin: 0;
+  }
+  .container .navbar .navbar__menu .menu__items .items {
+    margin: 0 0.5rem;
+    position: relative;
+  }
+  .container .navbar .navbar__menu .menu__sign .sign {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 100%;
+  }
+  .container .navbar .navbar__menu {
+    margin: 0;
+    display: none;
+  }
+  .container .navbar .mobile__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 10vh;
+    padding: 0 1rem;
+  }
+  .container .navbar .mobile__logo .logotip .logo {
+    width: 20%;
+    height: 20%;
+  }
+  .container .navbar .mobile__logo .logotip .name {
+    text-decoration: none;
+    color: #0b132a;
+  }
+  .container .navbar .mobile__logo .logotip .name .vpn {
+    color: #0b132a;
+    font-weight: 700;
+  }
+  .container .navbar .mobile__menu {
+    padding: 0.7rem 2.2rem;
+  }
+  .container .navbar .mobile__menu .menuu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 90vh;
+  }
+  .container .main .main__content {
+    width: 100%;
+    margin-left: 0;
+  }
+  .container .main .main__content .main__title {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 25px;
+    text-align: center;
+  }
+  .container .main .main__content .content__text {
+    width: 90%;
+    padding: 0;
+    margin: 1rem auto;
+  }
+  .container .main .main__content .content__link {
+    margin: 0 auto;
+  }
+  .container .main .main__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .main .main__img .img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .container .main__foot {
+    margin: 2rem 0;
+  }
+  .container .main__foot .main__footer {
+    -webkit-box-shadow: 0px 24px 72px rgba(0, 0, 0, 0.03);
+            box-shadow: 0px 24px 72px rgba(0, 0, 0, 0.03);
+  }
+  .container .check {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 120vh;
+  }
+  .container .check .check__img {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .container .check .check__content {
+    width: 100%;
+    margin: 0;
+  }
+  .container .check .check__content .check__title {
+    width: 100%;
+    text-align: center;
+  }
+  .container .check .check__content .check__text {
+    width: 86%;
+    margin: 0.5rem auto;
+  }
+  .container .check .check__content .check__table {
+    margin-left: 2rem;
+  }
+  .plan {
+    height: 400vh;
+  }
+  .plan .plan__content .textt {
+    margin: 0;
+  }
+  .plan .plan__content .textt .plan__text {
+    width: 100%;
+  }
+  .plan .intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .plan .intro .plan__box {
+    width: 70%;
+    margin: 0.5rem 0;
+  }
+  .map {
+    height: 100vh;
+  }
+  .map .map__content .content__tit .title {
+    width: 80%;
+  }
+  .map .map__content .content__te .text {
+    width: 80%;
+  }
+  .map .map__img img {
+    width: 84%;
+  }
+  .happy {
+    max-height: 100vh;
+  }
+  .happy .happy__content .happy__title {
+    width: 100%;
+  }
+  .happy .happy__content .happy__text {
+    width: 100%;
+  }
+  .happy .gallery {
+    margin: 0;
+  }
+  .happy .gallery .g {
+    padding: 1rem 1rem;
+  }
+  .happy .gallery .g .slider .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  .happy .gallery .g .swiper .prev {
+    font-size: 32px;
+  }
+  .happy .gallery .g .swiper .next {
+    font-size: 32px;
+  }
+  .footer {
+    height: 100vh;
+  }
+  .footer .footer__content1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+  }
+  .footer .footer__content1 .content .content__title .title {
+    text-align: center;
+    width: 100%;
+  }
+  .footer .footer__content1 .content .content__text .text {
+    text-align: center;
+  }
+  .footer .footer__adress {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    width: 90%;
+  }
+  .footer .footer__adress .adress__vpn .valya .vpn__logo {
+    margin: 1rem 0;
+  }
+  .footer .footer__adress .adress__vpn .valya .vpn__logo .vpn__img {
+    margin-right: 0.2rem;
+  }
+  .footer .footer__adress .adress__vpn .valya .vpn__text {
+    margin: 1rem 0;
+    width: 100%;
+  }
+  .footer .footer__adress .adress__vpn .valya .vpn__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .footer__adress .adress__vpn .valya .team {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .footer .footer__adress .footer__information .title {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+  .container .navbar .navbar__menu {
+    margin: 0;
+    display: none;
+  }
+  .container .navbar .mobile__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 10vh;
+    padding: 0 1rem;
+  }
+  .container .navbar .mobile__logo .logotip .logo {
+    width: 20%;
+    height: 20%;
+  }
+  .container .navbar .mobile__logo .logotip .name {
+    text-decoration: none;
+    color: #0b132a;
+  }
+  .container .navbar .mobile__logo .logotip .name .vpn {
+    color: #0b132a;
+    font-weight: 700;
+  }
+  .container .navbar .mobile__menu {
+    padding: 0.7rem 2.2rem;
+  }
+  .container .navbar .mobile__menu .menuu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 90vh;
+  }
+  .container .main .main__content {
+    width: 100%;
+    margin-left: 0;
+  }
+  .container .main .main__content .main__title {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 25px;
+    text-align: center;
+  }
+  .container .main .main__content .content__text {
+    width: 90%;
+    padding: 0;
+    margin: 1rem auto;
+  }
+  .container .main .main__content .content__link {
+    margin: 0 auto;
+  }
+  .container .main .main__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .main .main__img .img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .container .main__foot {
+    margin: 2rem 0;
+  }
+  .container .main__foot .main__footer {
+    -webkit-box-shadow: 0px 24px 72px rgba(0, 0, 0, 0.03);
+            box-shadow: 0px 24px 72px rgba(0, 0, 0, 0.03);
+  }
+  .container .check {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 120vh;
+  }
+  .container .check .check__img {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .container .check .check__content {
+    width: 100%;
+    margin: 0;
+  }
+  .container .check .check__content .check__title {
+    width: 100%;
+    text-align: center;
+  }
+  .container .check .check__content .check__text {
+    width: 86%;
+    margin: 0.5rem auto;
+  }
+  .container .check .check__content .check__table {
+    margin-left: 2rem;
+  }
+  .plan {
+    height: 400vh;
+  }
+  .plan .plan__content .textt {
+    margin: 0;
+  }
+  .plan .plan__content .textt .plan__text {
+    width: 100%;
+  }
+  .plan .intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .plan .intro .plan__box {
+    width: 70%;
+    margin: 0.5rem 0;
+  }
+  .map {
+    height: 100vh;
+  }
+  .map .map__content .content__tit .title {
+    width: 80%;
+  }
+  .map .map__content .content__te .text {
+    width: 80%;
+  }
+  .map .map__img img {
+    width: 84%;
+  }
+  .happy {
+    max-height: 100vh;
+  }
+  .happy .happy__content .happy__title {
+    width: 100%;
+  }
+  .happy .happy__content .happy__text {
+    width: 100%;
+  }
+  .happy .gallery {
+    margin: 0;
+  }
+  .happy .gallery .g {
+    padding: 1rem 1rem;
+  }
+  .happy .gallery .g .slider .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  .happy .gallery .g .swiper .prev {
+    font-size: 32px;
+  }
+  .happy .gallery .g .swiper .next {
+    font-size: 32px;
+  }
+  .footer {
+    height: 100vh;
+  }
+  .footer .footer__content1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+  }
+  .footer .footer__content1 .content .content__title .title {
+    text-align: center;
+    width: 100%;
+  }
+  .footer .footer__content1 .content .content__text .text {
+    text-align: center;
+  }
+  .footer .footer__adress {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    width: 90%;
+  }
+  .footer .footer__adress .adress__vpn .valya .vpn__logo {
+    margin: 1rem 0;
+  }
+  .footer .footer__adress .adress__vpn .valya .vpn__logo .vpn__img {
+    margin-right: 0.2rem;
+  }
+  .footer .footer__adress .adress__vpn .valya .vpn__text {
+    margin: 1rem 0;
+    width: 100%;
+  }
+  .footer .footer__adress .adress__vpn .valya .vpn__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .footer__adress .adress__vpn .valya .team {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .footer .footer__adress .footer__information .title {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
   .container .navbar .navbar__menu {
     display: none;
   }
@@ -1124,7 +1634,17 @@ body {
     color: floralwhite;
     border-radius: 5px;
     height: 35px;
-    margin-left: 6.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin: 0 auto;
   }
   .container .main .main__img {
     margin-left: 4rem;
@@ -1162,7 +1682,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: 3rem;
-    height: 100vh;
+    height: 107vh;
   }
   .container .check .check__img {
     width: 100%;
@@ -1298,298 +1818,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 1rem 0;
-  }
-  .footer .footer__adress .adress__vpn .valya .vpn__text .title {
-    font-weight: 700;
-  }
-  .footer .footer__adress .adress__vpn .valya .vpn__link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 1rem 0;
-  }
-  .footer .footer__adress .adress__vpn .valya .team {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .footer .footer__adress .adress__vpn .valya .vpn__text {
-    margin: 0;
-    width: 90%;
-  }
-  .footer .footer__adress .footer__information .title {
-    margin-bottom: 0.5rem;
-  }
-}
-
-@media (min-width: 321px) and (max-width: 767px) {
-  .container .navbar .navbar__menu {
-    display: none;
-  }
-  .container .navbar .mobile__logo {
-    margin-top: 0.5rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    margin-left: 1.5rem;
-  }
-  .container .navbar .mobile__logo .name {
-    font-size: 16px;
-    color: #000;
-    text-decoration: none;
-    font-weight: 400;
-  }
-  .container .navbar .mobile__logo .name .vpn {
-    font-weight: 600;
-    font-size: 16px;
-  }
-  .container .navbar .mobile__menu {
-    padding: 0;
-    height: 100vh;
-  }
-  .container .navbar .mobile__menu .menuu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .container .navbar .mobile__menu .mobile__items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .container .navbar .mobile__menu .mobile__items {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .container .check {
-    margin-top: 3rem;
-  }
-  .container .main {
-    margin-left: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 2rem;
-    position: relative;
-    height: 60vh;
-  }
-  .container .main .main__content {
-    width: 100%;
-    height: 100%;
-    margin-left: 0;
-  }
-  .container .main .main__content .main__title {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-    width: 100%;
-    font-size: 25px;
-    text-align: center;
-  }
-  .container .main .main__content .content__text {
-    margin-left: 1.5rem;
-    padding: 0;
-    width: 100%;
-  }
-  .container .main .main__content .content__link {
-    background: #f53838;
-    font-size: 16px;
-    color: #f53838;
-    border-radius: 0px;
-    margin-top: 1rem;
-    width: 50%;
-    color: floralwhite;
-    border-radius: 5px;
-    height: 35px;
-    margin-left: 6.5rem;
-  }
-  .container .main .main__img .img {
-    margin-left: 2rem;
-    height: 80%;
-    margin-top: 1.5rem;
-  }
-  .container .main__foot {
-    margin-left: 0;
-  }
-  .container .main__foot .main__footer {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  .container .main__foot .main__footer .footer__table {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-left: 2.5rem;
-  }
-  .container .main__foot .main__footer .footer__table .table__img {
-    width: 100%;
-  }
-  .container .main__foot .main__footer .footer__table .table__result {
-    margin-left: 0.5rem;
-  }
-  .container .check {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .container .check .check__img {
-    width: 100%;
-    margin: 0;
-  }
-  .container .check .check__img img {
-    width: 100%;
-    height: 100%;
-  }
-  .container .check .check__content {
-    width: 100%;
-    margin-left: 0;
-  }
-  .container .check .check__content .check__title {
-    text-align: center;
-    width: 100%;
-  }
-  .container .check .check__content .check__text {
-    width: 100%;
-  }
-  .plan {
-    background-color: #fff;
-    margin-top: 5rem;
-    height: 320vh;
-  }
-  .plan .plan__content .plan_title {
-    display: block;
-  }
-  .plan .plan__content .textt {
-    margin: 0;
-  }
-  .plan .plan__content .textt .plan__text {
-    width: 100%;
-  }
-  .plan .intro {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .plan .intro .plan__box {
-    margin-top: 1rem;
-    width: 80%;
-  }
-  .map {
-    height: 70vh;
-  }
-  .map .map__content .content__tit .title {
-    width: 100%;
-  }
-  .map .map__content .content__te .text {
-    width: 100%;
-  }
-  .map .map__img img {
-    margin: 0.2rem auto;
-    width: 90%;
-  }
-  .map .map__link a {
-    width: 100%;
-  }
-  .map .map__link a img {
-    margin: 0 auto;
-    width: 15%;
-  }
-  .happy {
-    height: 75vh;
-  }
-  .happy .happy__content .happy__title {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    font-size: 32px;
-  }
-  .happy .happy__content .happy__text {
-    width: 100%;
-  }
-  .happy .gallery {
-    width: 100%;
-    margin-top: 1rem;
-  }
-  .happy .gallery .g {
-    padding: 1rem 0.5rem;
-  }
-  .happy .gallery .g .slider .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-  }
-  .happy .gallery .g .swiper .prev {
-    font-size: 28px;
-  }
-  .happy .gallery .g .swiper .next {
-    font-size: 28px;
-  }
-  .happy .gallery .gallery__list {
-    width: 100%;
-  }
-  .happy .gallery .gallery__list .gallery__item {
-    width: 400px;
-  }
-  .footer {
-    height: 150vh;
-  }
-  .footer .footer__content1 {
-    height: 200px;
-    width: 90%;
-    margin: 0 auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 0;
-  }
-  .footer .footer__content1 .content .content__title .title {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .footer .footer__adress {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    width: 90%;
-    margin: 4rem auto;
-  }
-  .footer .footer__adress .adress__vpn .valya .vpn__logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     margin: 1rem 0;
   }
   .footer .footer__adress .adress__vpn .valya .vpn__text .title {

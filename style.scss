@@ -20,6 +20,7 @@ body {
       justify-content: space-evenly;
       align-items: center;
       margin-top: 1rem;
+      height: 10vh;
 
       .menu__logo {
         display: flex;
@@ -78,28 +79,46 @@ body {
         }
       }
 
-      position: relative;
-
       .menu__sign {
+        display: flex;
+        align-items: center;
         .sign {
           text-decoration: none;
           color: #000;
           font-size: 18px;
           font-weight: 400;
+          padding: 0.8rem 3rem;
         }
 
-        .up {
-          position: absolute;
-          top: 20%;
-          left: 90%;
-          text-decoration: none;
-          color: #f53855;
-          font-size: 18px;
-          font-weight: 400;
+        .link {
+          .signup {
+            padding: 0.8rem 3rem;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+            color: #f53855;
+            border-radius: 50px;
+            border: 1px solid #f53855;
+          }
+          .signup:hover {
+            color: #fff;
+            background-color: #f53855;
+          }
+        }
+        .link:hover {
+          animation: 0.5s infinite;
+          animation-name: duk;
         }
       }
     }
-
+    @keyframes duk {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.2);
+      }
+    }
     //start mobile menu
     .mobile__logo {
       display: none;
@@ -681,7 +700,6 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      // width: 80%;
       padding: 3rem 15rem;
       .slider {
         .swiper-pagination-bullet {
@@ -717,7 +735,6 @@ body {
           color: #f53838;
           padding: 0.5rem;
           font-size: 38px;
-
           transition: all 0.5s ease;
         }
         .next:hover {
@@ -728,12 +745,10 @@ body {
     }
   }
   .swiper {
-    // height: 100vh;
     .swiper-container {
       .swiper-wrapper {
         .swiper-slide {
           background-color: red;
-          // text-align: center;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -801,16 +816,11 @@ body {
         color: #f53838;
       }
     }
-    // .content__btn:hover {
-    // }
   }
-  // .footer__content1:hover {
-  //   transform: scale(1.1);
-  // }
+
   .footer__adress {
     display: flex;
     justify-content: space-evenly;
-    // align-items: center;
     margin: 5rem auto;
     width: 90%;
     .adress__vpn {
@@ -835,6 +845,7 @@ body {
           width: 50%;
         }
         .vpn__link {
+          margin-bottom: 2rem;
           .img {
             border-radius: 50%;
             width: 30px;
@@ -843,7 +854,6 @@ body {
             background: #fff;
             color: #f53838;
           }
-          margin-bottom: 2rem;
         }
         .team {
           text-decoration: none;
@@ -856,7 +866,7 @@ body {
       .title {
         font-weight: 500;
         font-size: 20px;
-        margin-bottom: 1.2rem;
+        margin-bottom: 1rem;
       }
       .branch {
         line-height: 35px;
@@ -871,7 +881,488 @@ body {
   }
 }
 
-@media (max-width: 320px) {
+@media(min-width:1024px) (max-width:1366px){
+  .container {
+    width: 100%;
+    .navbar {
+      .navbar__menu {
+        .menu__logo {
+          .logo {
+            margin: 0;
+          }
+        }
+        .menu__items {
+          .items {
+            margin: 0 0.5rem;
+            position: relative;
+          }
+        }
+        .menu__sign {
+          .sign {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+} 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 100%;
+    .navbar {
+      .navbar__menu {
+        margin: 0;
+        display: none;
+      }
+      .mobile__logo {
+        display: flex;
+        height: 10vh;
+        padding: 0 1rem;
+        // width: 100%;
+        .logotip {
+          // margin-left: 3rem;
+
+          .logo {
+            width: 20%;
+            height: 20%;
+          }
+          .name {
+            text-decoration: none;
+            color: #0b132a;
+            .vpn {
+              color: #0b132a;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+      .mobile__menu {
+        padding: 0.7rem 2.2rem;
+        .menuu {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+    .main {
+      flex-direction: column;
+      height: 90vh;
+      .main__content {
+        width: 100%;
+        margin-left: 0;
+        .main__title {
+          margin: 0 auto;
+          width: 80%;
+          font-size: 25px;
+          text-align: center;
+        }
+        .content__text {
+          width: 90%;
+          padding: 0;
+          margin: 1rem auto;
+        }
+        .content__link {
+          margin: 0 auto;
+        }
+      }
+      .main__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+    .main__foot {
+      margin: 2rem 0;
+
+      // height: vh;
+      .main__footer {
+        box-shadow: 0px 24px 72px rgba(0, 0, 0, 0.03);
+      }
+    }
+    .check {
+      flex-direction: column;
+      height: 120vh;
+      .check__img {
+        margin: 0 auto;
+        width: 80%;
+      }
+      .check__content {
+        width: 100%;
+        margin: 0;
+        .check__title {
+          width: 100%;
+          text-align: center;
+        }
+        .check__text {
+          width: 86%;
+          margin: 0.5rem auto;
+        }
+        .check__table {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+  .plan {
+    height: 400vh;
+    .plan__content {
+      .textt {
+        margin: 0;
+        .plan__text {
+          width: 100%;
+        }
+      }
+    }
+
+    .intro {
+      flex-direction: column;
+      .plan__box {
+        width: 70%;
+        margin: 0.5rem 0;
+      }
+    }
+  }
+  .map {
+    height: 100vh;
+    .map__content {
+      .content__tit {
+        .title {
+          width: 80%;
+        }
+      }
+      .content__te {
+        .text {
+          width: 80%;
+        }
+      }
+    }
+    .map__img {
+      img {
+        width: 84%;
+      }
+    }
+  }
+  .happy {
+    max-height: 100vh;
+    .happy__content {
+      .happy__title {
+        width: 100%;
+      }
+      .happy__text {
+        width: 100%;
+      }
+    }
+    .gallery {
+      margin: 0;
+      .g {
+        padding: 1rem 1rem;
+        .slider {
+          .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+          }
+        }
+        .swiper {
+          .prev {
+            font-size: 32px;
+          }
+
+          .next {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    height: 100vh;
+    .footer__content1 {
+      flex-direction: column;
+      width: 95%;
+      // height: auto;
+      .content {
+        .content__title {
+          .title {
+            text-align: center;
+            width: 100%;
+          }
+        }
+        .content__text {
+          .text {
+            text-align: center;
+            // color: red;
+          }
+        }
+      }
+    }
+    .footer__adress {
+      flex-direction: column-reverse;
+      width: 90%;
+      .adress__vpn {
+        .valya {
+          .vpn__logo {
+            margin: 1rem 0;
+            .vpn__img {
+              margin-right: 0.2rem;
+            }
+          }
+          .vpn__text {
+            margin: 1rem 0;
+            width: 100%;
+          }
+          .vpn__link {
+            display: flex;
+            justify-content: space-between;
+          }
+          .team {
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+      }
+      .footer__information {
+        .title {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .container {
+    width: 100%;
+    .navbar {
+      .navbar__menu {
+        margin: 0;
+        display: none;
+      }
+      .mobile__logo {
+        display: flex;
+        height: 10vh;
+        padding: 0 1rem;
+        // width: 100%;
+        .logotip {
+          // margin-left: 3rem;
+
+          .logo {
+            width: 20%;
+            height: 20%;
+          }
+          .name {
+            text-decoration: none;
+            color: #0b132a;
+            .vpn {
+              color: #0b132a;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+      .mobile__menu {
+        padding: 0.7rem 2.2rem;
+        .menuu {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+    .main {
+      flex-direction: column;
+      height: 90vh;
+      .main__content {
+        width: 100%;
+        margin-left: 0;
+        .main__title {
+          margin: 0 auto;
+          width: 80%;
+          font-size: 25px;
+          text-align: center;
+        }
+        .content__text {
+          width: 90%;
+          padding: 0;
+          margin: 1rem auto;
+        }
+        .content__link {
+          margin: 0 auto;
+        }
+      }
+      .main__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+    .main__foot {
+      margin: 2rem 0;
+
+      // height: vh;
+      .main__footer {
+        box-shadow: 0px 24px 72px rgba(0, 0, 0, 0.03);
+      }
+    }
+    .check {
+      flex-direction: column;
+      height: 120vh;
+      .check__img {
+        margin: 0 auto;
+        width: 80%;
+      }
+      .check__content {
+        width: 100%;
+        margin: 0;
+        .check__title {
+          width: 100%;
+          text-align: center;
+        }
+        .check__text {
+          width: 86%;
+          margin: 0.5rem auto;
+        }
+        .check__table {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+  .plan {
+    height: 400vh;
+    .plan__content {
+      .textt {
+        margin: 0;
+        .plan__text {
+          width: 100%;
+        }
+      }
+    }
+
+    .intro {
+      flex-direction: column;
+      .plan__box {
+        width: 70%;
+        margin: 0.5rem 0;
+      }
+    }
+  }
+  .map {
+    height: 100vh;
+    .map__content {
+      .content__tit {
+        .title {
+          width: 80%;
+        }
+      }
+      .content__te {
+        .text {
+          width: 80%;
+        }
+      }
+    }
+    .map__img {
+      img {
+        width: 84%;
+      }
+    }
+  }
+  .happy {
+    max-height: 100vh;
+    .happy__content {
+      .happy__title {
+        width: 100%;
+      }
+      .happy__text {
+        width: 100%;
+      }
+    }
+    .gallery {
+      margin: 0;
+      .g {
+        padding: 1rem 1rem;
+        .slider {
+          .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+          }
+        }
+        .swiper {
+          .prev {
+            font-size: 32px;
+          }
+
+          .next {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    height: 100vh;
+    .footer__content1 {
+      flex-direction: column;
+      width: 95%;
+      // height: auto;
+      .content {
+        .content__title {
+          .title {
+            text-align: center;
+            width: 100%;
+          }
+        }
+        .content__text {
+          .text {
+            text-align: center;
+            // color: red;
+          }
+        }
+      }
+    }
+    .footer__adress {
+      flex-direction: column-reverse;
+      width: 90%;
+      .adress__vpn {
+        .valya {
+          .vpn__logo {
+            margin: 1rem 0;
+            .vpn__img {
+              margin-right: 0.2rem;
+            }
+          }
+          .vpn__text {
+            margin: 1rem 0;
+            width: 100%;
+          }
+          .vpn__link {
+            display: flex;
+            justify-content: space-between;
+          }
+          .team {
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+      }
+      .footer__information {
+        .title {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
   .container {
     .navbar {
       .navbar__menu {
@@ -920,7 +1411,6 @@ body {
       }
     }
 
-  
     .main {
       margin-left: 0;
       flex-direction: column;
@@ -958,7 +1448,12 @@ body {
           color: floralwhite;
           border-radius: 5px;
           height: 35px;
-          margin-left: 6.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          margin: 0 auto;
+          // margin-left: 6.5rem;
         }
       }
 
@@ -999,7 +1494,7 @@ body {
     .check {
       flex-direction: column;
       margin-top: 3rem;
-      height: 100vh;
+      height: 107vh;
 
       .check__img {
         width: 100%;
@@ -1017,18 +1512,18 @@ body {
         margin-left: 0;
 
         .check__title {
-          margin-top:4rem;
-          margin-left:1rem;
+          margin-top: 4rem;
+          margin-left: 1rem;
           text-align: center;
           width: 100%;
         }
 
         .check__text {
-          margin-left:1.5rem;
+          margin-left: 1.5rem;
           width: 100%;
         }
-        .table{
-          margin-left: 1.5rem; 
+        .table {
+          margin-left: 1.5rem;
         }
       }
     }
@@ -1161,7 +1656,6 @@ body {
       margin: 4rem auto;
       .adress__vpn {
         .valya {
-          
           .vpn__logo {
             display: flex;
             // justify-content: space-between;
@@ -1196,325 +1690,4 @@ body {
       }
     }
   }
-}
-
-@media (min-width: 321px) and (max-width: 767px) {
-  .container {
-    .navbar {
-      .navbar__menu {
-        display: none;
-      }
-
-      .mobile__logo {
-        margin-top: 0.5rem;
-        display: flex;
-        width: 100%;
-        margin-left: 1.5rem;
-
-        .name {
-          font-size: 16px;
-          color: #000;
-          text-decoration: none;
-          font-weight: 400;
-
-          .vpn {
-            font-weight: 600;
-            font-size: 16px;
-          }
-        }
-      }
-
-      .mobile__menu {
-        padding: 0;
-        height: 100vh;
-
-        .menuu {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        .mobile__items {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-        }
-
-        .mobile__items {
-          flex-direction: column;
-        }
-      }
-    }
-
-    .check {
-      margin-top: 3rem;
-    }
-
-    .main {
-      margin-left: 0;
-      flex-direction: column;
-      margin-top: 2rem;
-      position: relative;
-      height: 60vh;
-
-      .main__content {
-        width: 100%;
-        height: 100%;
-        margin-left: 0;
-
-        .main__title {
-          margin-left: 1.5rem;
-          margin-bottom: 1rem;
-          width: 100%;
-          font-size: 25px;
-          text-align: center;
-        }
-
-        .content__text {
-          margin-left: 1.5rem;
-          padding: 0;
-          width: 100%;
-        }
-
-        .content__link {
-          background: #f53838;
-          font-size: 16px;
-          color: #f53838;
-          border-radius: 0px;
-          margin-top: 1rem;
-          width: 50%;
-          color: floralwhite;
-          border-radius: 5px;
-          height: 35px;
-          margin-left: 6.5rem;
-        }
-      }
-
-      .main__img {
-        .img {
-          margin-left: 2rem;
-          height: 80%;
-          margin-top: 1.5rem;
-        }
-      }
-    }
-
-    .main__foot {
-      margin-left: 0;
-
-      .main__footer {
-        box-shadow: none;
-
-        .footer__table {
-          flex-direction: column;
-          margin-left: 2.5rem;
-
-          .table__img {
-            width: 100%;
-          }
-
-          .table__result {
-            margin-left: 0.5rem;
-          }
-        }
-      }
-    }
-
-    .check {
-      flex-direction: column;
-
-      .check__img {
-        width: 100%;
-        margin: 0;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      .check__content {
-        width: 100%;
-        margin-left: 0;
-
-        .check__title {
-          text-align: center;
-          width: 100%;
-        }
-
-        .check__text {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  .plan {
-    background-color: #fff;
-    margin-top: 5rem;
-    height: 320vh;
-    .plan__content {
-      .plan_title {
-        display: block;
-      }
-
-      .textt {
-        margin: 0;
-
-        .plan__text {
-          width: 100%;
-        }
-      }
-    }
-
-    .intro {
-      flex-direction: column;
-
-      .plan__box {
-        margin-top: 1rem;
-        width: 80%;
-      }
-    }
-  }
-  // .container {
-  .map {
-    height: 70vh;
-    // margin-top: 95rem;
-    .map__content {
-      .content__tit {
-        .title {
-          width: 100%;
-        }
-      }
-      .content__te {
-        .text {
-          width: 100%;
-        }
-      }
-    }
-    .map__img {
-      img {
-        margin: 0.2rem auto;
-        width: 90%;
-      }
-    }
-    .map__link {
-      a {
-        width: 100%;
-        img {
-          margin: 0 auto;
-          width: 15%;
-        }
-      }
-    }
-  }
-  // }
-  .happy {
-    height: 75vh;
-    .happy__content {
-      .happy__title {
-        width: 100%;
-        margin: 0 auto;
-        padding: 0;
-        font-size: 32px;
-      }
-      .happy__text {
-        width: 100%;
-      }
-    }
-
-    .gallery {
-      // display: none;
-      width: 100%;
-      margin-top: 1rem;
-      .g {
-        padding: 1rem 0.5rem;
-        .slider {
-          .swiper-pagination-bullet {
-            width: 8px;
-            height: 8px;
-          }
-        }
-        .swiper {
-          .prev {
-            font-size: 28px;
-          }
-
-          .next {
-            font-size: 28px;
-          }
-        }
-      }
-      .gallery__list {
-        width: 100%;
-        .gallery__item {
-          width: 400px;
-        }
-      }
-    }
-  }
-  .footer {
-    height: 150vh;
-
-    .footer__content1 {
-      height: 200px;
-      width: 90%;
-      margin: 0 auto;
-      flex-direction: column;
-      padding: 0;
-      .content {
-        .content__title {
-          .title {
-            width: 100%;
-            margin: 0 auto;
-          }
-        }
-      }
-    }
-    .footer__adress {
-      flex-direction: column-reverse;
-      width: 90%;
-      margin: 4rem auto;
-      .adress__vpn {
-        .valya {
-          .vpn__logo {
-            display: flex;
-            justify-content: space-between;
-            margin: 1rem 0;
-          }
-          .vpn__text {
-            .title {
-              font-weight: 700;
-            }
-          }
-          .vpn__link {
-            display: flex;
-            justify-content: space-between;
-            margin: 1rem 0;
-          }
-          .team {
-            display: flex;
-            justify-content: flex-end;
-          }
-
-          //  text-align: center;
-          .vpn__text {
-            margin: 0;
-            width: 90%;
-          }
-        }
-      }
-      .footer__information {
-        .title {
-          margin-bottom: 0.5rem;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-}
-@media (min-width: 1024px) and (max-width: 1440px) {
 }
