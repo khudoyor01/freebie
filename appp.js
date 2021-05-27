@@ -19,10 +19,6 @@ let swiper = new Swiper(".swiper-container", {
   mousewheel: true,
   keyboard: true,
   breakpoints: {
-    // 210: {
-    //   slidesPerView: 1,
-    //   spaceBetween: 40,
-    // },
     320: {
       slidesPerView: 1,
       spaceBetween: 40,
@@ -33,7 +29,7 @@ let swiper = new Swiper(".swiper-container", {
     }
    ,
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 30,
     },
     
