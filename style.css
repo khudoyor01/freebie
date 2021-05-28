@@ -31,6 +31,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 10vh;
+  margin-left: 4rem;
 }
 
 .container .navbar .navbar__menu .menu__logo {
@@ -68,6 +69,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 3rem;
 }
 
 .container .navbar .navbar__menu .menu__items .items {
